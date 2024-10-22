@@ -1,3 +1,7 @@
+<h1>Diretivas</h1>
+
+<h2>Diretivas de estrutura</h2>
+
 <button (click)="tornarTextoVisivel()">
   Clique para mostrar texto
 </button>
@@ -16,3 +20,14 @@
     <p *ngSwitchDefault>Cor não especificada</p>
   </div>
 }
+
+<h2>Diretivas de atributo</h2>
+
+<h3>Escolha uma com para marcar o texto:</h3>
+<div>
+  <input type="radio" name="color" (click)="color='lightgreen'"> Verde
+  <input type="radio" name="color" (click)="color='yellow'"> Amarelo
+  <input type="radio" name="color" (click)="color='cyan'"> Ciano
+</div>
+
+<p [appHighlight]="color">Me marque!</p>
